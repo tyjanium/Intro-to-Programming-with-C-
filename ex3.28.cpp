@@ -21,29 +21,30 @@ int main(){
     cout << "Enter 0 to convert dollars to RMB and 1 vive versa: ";
     cin >> conversion;
 
-    // Switch statements to select dollars or RMB
-    switch (conversion){
-        case 0:
-            cout << "Enter the dollar amount: ";
-            cin >> dollars;
+    if (conversion == 0){
+        cout << "Enter the dollar amount: ";
+        cin >> dollars;
 
-            // Convert dollars to yuan
-            RMB = dollars * exchange_rate;
+        // Convert dollars to yuan
+        RMB = dollars * exchange_rate;
 
-            cout << "$" << dollars << " is " << RMB << " yuan" << endl;
-            break;
+        cout << "$" << dollars << " is " << RMB << " yuan" << endl;
+    }
+        
+    else if (conversion == 1){
+        cout << "Enter the RMB amount: ";
+        cin >> RMB;
 
-        case 1:
-            cout << "Enter the RMB amount: ";
-            cin >> RMB;
+        // Convert yuan to dollars
+        dollars = RMB / exchange_rate;
 
-            // Convert yuan to dollars
-            dollars = RMB / exchange_rate;
-
-            cout << RMB << " yuan is $" << fixed << setprecision(2) 
-                << dollars << endl;
-            break;
+        cout << RMB << " yuan is $" << fixed << setprecision(2) 
+            << dollars << endl;
     }
 
+    else {
+        cout << "Invalid Input" << endl;
+    }
+    
     return 0;
 }
