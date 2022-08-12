@@ -30,7 +30,7 @@ int main(){
 
         cout << "$" << dollars << " is " << RMB << " yuan" << endl;
     }
-        
+ 
     else if (conversion == 1){
         cout << "Enter the RMB amount: ";
         cin >> RMB;
