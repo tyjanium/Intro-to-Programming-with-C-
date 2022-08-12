@@ -29,8 +29,8 @@ int main(){
         RMB = dollars * exchange_rate;
 
         cout << "$" << dollars << " is " << RMB << " yuan" << endl;
-    } 
-    
+    }
+ 
     else if (conversion == 1){
         cout << "Enter the RMB amount: ";
         cin >> RMB;
@@ -42,8 +42,9 @@ int main(){
             << dollars << endl;
     }
 
-    else
-        cout << "Incorrect input" << endl;
-
+    else {
+        cout << "Invalid Input" << endl;
+    }
+    
     return 0;
 }
